@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test:ui": "playwright test",
-    "test:ui:headed": "playwright test --headed", 
+    "test:ui:headed": "playwright test --headed",
     "build:load": "tsc -p ./load/tsconfig.load.json",
     "load:local": "npm run build:load && npx artillery run ./load/local.yml",
     "load:public": "npm run build:load && npx artillery run ./load/public.yml",
@@ -12,7 +12,6 @@
     "load:env:public": "npm run build:load && cross-env TARGET_URL=https://the-internet.herokuapp.com npx artillery run ./load/env.yml",
     "load:env:local": "npm run build:load && cross-env TARGET_URL=http://localhost:3000 npx artillery run ./load/env.yml",
     "load:public:report": "npm run build:load && npx artillery run ./load/public.yml --output ./load/report-public.json"
-
   },
   "keywords": [],
   "author": "",
