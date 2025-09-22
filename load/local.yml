@@ -1,0 +1,20 @@
+config:
+  target: "http://localhost:3000"   # ⬅️ Ajusta al puerto/host de tu app local
+  phases:
+    - duration: 60        # 60s
+      arrivalRate: 2      # 2 usuarios nuevos/seg al inicio
+      rampTo: 10          # sube hasta 10/seg (ramp-up suave)
+  engines:
+    playwright: {}
+
+  # Artillery usará navegador real (Playwright). Por eficiencia,
+  # por defecto abrirá un browser y creará contextos por usuario.
+
+  # Donde Artillery buscará nuestro "script" (JS compilado)
+  processor: "./dist/flows.js"
+
+scenarios:
+  - name: "Flujo básico home→login"
+    engine: "playwright"
+    # Indica qué función exportada del processor ejecutar por VU
+    testFunction: "flujoBasico"

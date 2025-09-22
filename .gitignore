@@ -1,0 +1,18 @@
+
+# Playwright
+node_modules/
+# Ignorar reportes de Playwright
+/test-results/
+/playwright-report/
+
+/blob-report/
+/playwright/.cache/
+# Ignorar compilados de Artillery (JavaScript generado desde TypeScript)
+/load/dist/
+
+# Ignorar reportes de Playwright
+playwright-report/
+test-results/
+
+# Ignorar reportes JSON de Artillery (si los generas)
+load/*.json

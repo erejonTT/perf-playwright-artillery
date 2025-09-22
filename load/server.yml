@@ -1,0 +1,14 @@
+config:
+  target: "https://TU-SERVIDOR-PERFORMANCE.dominio-o-ip"  # ⬅️ lo pondremos en el paso 4
+  phases:
+    - duration: 90
+      arrivalRate: 2
+      rampTo: 8
+  engines:
+    playwright: {}
+  processor: "./dist/flows.js"
+
+scenarios:
+  - name: "Flujo básico (server)"
+    engine: "playwright"
+    testFunction: "flujoBasico"

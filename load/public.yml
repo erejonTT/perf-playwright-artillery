@@ -1,0 +1,14 @@
+config:
+  target: "https://the-internet.herokuapp.com/"   # ⬅️ Ajusta a tu URL pública
+  phases:
+    - duration: 60
+      arrivalRate: 2
+      rampTo: 10
+  engines:
+    playwright: {}
+  processor: "./dist/flows.js"
+
+scenarios:
+  - name: "Flujo básico (público)"
+    engine: "playwright"
+    testFunction: "flujoBasico"
