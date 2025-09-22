@@ -15,4 +15,8 @@ playwright-report/
 test-results/
 
 # Ignorar reportes JSON de Artillery (si los generas)
-load/*.json
+#load/*.json
+
+# Artillery reports opcionales
+load/artillery-*.json
+load/report-*.json
